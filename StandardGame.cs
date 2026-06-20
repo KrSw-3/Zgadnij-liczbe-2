@@ -80,9 +80,10 @@ public class StandardGame : GameSession
         else
         {
             if (lang == "Polish")
-                ui.displayMessage("Nie udało ci się odgadnąć w ustalonej liczbie prób");
+                ui.displayMessage("Nie udało ci się odgadnąć w ustalonej liczbie prób\nNanciśnij ENTER aby przejść dalej");
             else
-                ui.displayMessage("You haven't guessed the number in a chosen tries count");
+                ui.displayMessage("You haven't guessed the number in a chosen tries count\nPress ENTER to continue");
+            Console.ReadKey();
             PlayerRecord playerRecord1 = new();
             return playerRecord1;
         }
